@@ -7,7 +7,6 @@ ANSWERS = []
 COMMENTS = []
 
 
-
 class Question(object):
     ''' A Questions class'''
 
@@ -42,11 +41,11 @@ class Question(object):
         return QUESTIONS
 
     @classmethod
-    def view_question_by_ID(cls,question_id):
+    def view_question_by_ID(cls, question_id):
         for question in QUESTIONS:
             if question_id == question['Id']:
                 return question
-        
+
     @classmethod
     def ask_question(cls, question_title, question_description):
         """A method for asking a question"""
@@ -63,6 +62,7 @@ class Question(object):
 
             QUESTIONS.append(cls.data)
             return "Your question has been successfully asked."
+
 
 class Answer(object):
     def __init__(
@@ -101,7 +101,6 @@ class Answer(object):
                 return "You have successfully answered the question."
 
 
-
 class Comment(object):
     def __init__(self, text1, answer_id, question_id, date_commented):
         self.text1 = text1
@@ -124,6 +123,7 @@ class Comment(object):
                         COMMENTS.append(cls.data2)
                         return "You have successfully commented on the answer."
 
+
 class Up_vote(object):
     def __init__(self, answer_id, question_id):
         self.answer_id = answer_id
@@ -139,6 +139,7 @@ class Up_vote(object):
                         answer['up_vote'] = answer['up_vote'] + 1
                         return "You have successfully upvoted the answer."
         abort(404)
+
 
 class Down_vote(object):
     def __init__(self, answer_id, question_id):

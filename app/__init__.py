@@ -13,7 +13,7 @@ def create_app(configuration_name):
     from app.comment.views import COMMENT_APP
     from app.upvote.views import UPVOTE_APP
     from app.downvote.views import DOWNVOTE_APP
-   
+
     # register_blueprint
     app.register_blueprint(QUESTION_APP)
     app.register_blueprint(ANSWER_APP)

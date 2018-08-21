@@ -1,9 +1,6 @@
 from run import app
 import unittest
-import uuid
 from flask import json
-from app.answer import views
-from app.question import views
 
 
 class TestAnswer(unittest.TestCase):

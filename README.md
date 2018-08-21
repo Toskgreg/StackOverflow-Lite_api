@@ -64,7 +64,7 @@ Stackoverflow-lite is a platform where people can ask questions and provide answ
     ` python run.py `
 
  2. To run tests
-    `  python -m pytest --cov tests/ `
+    `  pytest tests/test.py `
 ## Author
 
 **Toskin Gregory**

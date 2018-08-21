@@ -1,7 +1,7 @@
 """This module handles the class UPVOTEApi and its post method"""
 import uuid
 from flask.views import MethodView
-from flask import jsonify, request, make_response
+from flask import jsonify, make_response
 from app.models import *
 
 

@@ -1,6 +1,6 @@
 import uuid
 from flask.views import MethodView
-from flask import jsonify, request, make_response
+from flask import jsonify, request
 from app.models import *
 
 

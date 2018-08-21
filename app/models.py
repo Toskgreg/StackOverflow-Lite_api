@@ -1,7 +1,6 @@
 """This module contains classes Question,Answer,Upvote,Downvote,comments and their methods"""
 import uuid
 from datetime import datetime as dt
-from flask import jsonify, request, make_response
 QUESTIONS = []
 ANSWERS = []
 COMMENTS = []

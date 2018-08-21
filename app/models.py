@@ -41,6 +41,13 @@ class Question(object):
         """ Return all the questions asked on the forum."""
         return QUESTIONS
 
+    @classmethod
+    def view_question_by_ID(cls,question_id):
+        for question in QUESTIONS:
+            if question_id == question['Id']:
+                return question
+        
+
 
     @classmethod
     def ask_question(cls, question_title, question_description):

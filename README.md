@@ -1,5 +1,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/Toskgreg/StackOverflow-Lite_api/badge.svg?branch=develop)](https://coveralls.io/github/Toskgreg/StackOverflow-Lite_api?branch=develop)
 [![Build Status](https://travis-ci.org/Toskgreg/StackOverflow-Lite_api.svg?branch=develop)](https://travis-ci.org/Toskgreg/StackOverflow-Lite_api)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d9559d4690e544f7ac013e875e77e0f1)](https://www.codacy.com/project/Toskgreg/StackOverflow-Lite_api/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Toskgreg/StackOverflow-Lite_api&amp;utm_campaign=Badge_Grade_Dashboard)
 # StackOverflow-lite
 StackOverflow-lite is a question and answer application that provides users with the ability to ask questions and have other users answer the questions
 

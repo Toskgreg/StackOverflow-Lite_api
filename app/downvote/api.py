@@ -1,7 +1,7 @@
 """This module handles the class DOWNVOTEApi and its post method"""
 import uuid
 from flask.views import MethodView
-from flask import jsonify, make_response
+from flask import jsonify
 from app.models import *
 
 

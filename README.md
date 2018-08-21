@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/Toskgreg/StackOverflow-Lite_api/badge.svg?branch=develop)](https://coveralls.io/github/Toskgreg/StackOverflow-Lite_api?
+[![Coverage Status](https://coveralls.io/repos/github/Toskgreg/StackOverflow-Lite_api/badge.svg?branch=develop)](https://coveralls.io/github/Toskgreg/StackOverflow-Lite_api?branch=develop)
 [![Build Status](https://travis-ci.org/Toskgreg/StackOverflow-Lite_api.svg?branch=develop)](https://travis-ci.org/Toskgreg/StackOverflow-Lite_api)
 # StackOverflow-lite
 StackOverflow-lite is a question and answer application that provides users with the ability to ask questions and have other users answer the questions

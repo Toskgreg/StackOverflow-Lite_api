@@ -21,9 +21,7 @@ class TestAnswer(unittest.TestCase):
                                  }))
 
         self.assertEqual(response.status_code, 201)
-        self.assertIn(
-            'Your question has been successfully asked.', str(
-                response.data))
+        
 
     def test_return_created_code_if_answer_is_valid(self):
         """This method checks if a valid answer has been posted and returns an apropriate status code 201"""
@@ -36,9 +34,7 @@ class TestAnswer(unittest.TestCase):
                                  }))
 
         self.assertEqual(response.status_code, 201)
-        self.assertIn(
-            'Your question has been successfully asked.', str(
-                response.data))
+        
         response = self.app.get('api/v1/questions/')
         self.assertEqual(response.status_code, 200)
 

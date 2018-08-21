@@ -45,6 +45,7 @@ class Question(object):
         for question in QUESTIONS:
             if question_id == question['Id']:
                 return question
+            return "Your question has been successfully asked."
 
     @classmethod
     def ask_question(cls, question_title, question_description):

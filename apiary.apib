@@ -1,0 +1,88 @@
+FORMAT: 1A
+HOST: 
+
+# StackOverflow-Lite
+
+StackOverflow-Lite is a question and answer application that provides users with the ability to ask questions and have their fellow users answer them.
+
+## questions [/api/v1/questions/]
+
+### Ask a quesion [POST]
+
+You can ask a question sending the question_title and question_description.
+
++ Request (application/json)
+
+            {
+            "question_title": "What is Python?",
+            "question_description": "Am a novice programmer and wanted to know what python language stands for"
+            }
+            
++ Response 201 (application/json)
+
+            {
+                "response" : "You have successfully asked the question"
+            }
+            
++ Response 409 (application/json)
+
+            {
+                "response" : "question already exists"
+            }
+            
+        
+
+### Fetch all question [GET]
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+        [
+            {
+            "Id": "3a4ebf64-73d0-11e8-a770-9457a5dbffff",
+            "date": "2018-12-12",
+            "question_description": "Am a novice programmer and wanted to know what python language stands for",
+            "answers": [],
+            "question_title": "what is python?"
+            },
+            {
+            "Id": "6147f722-73d0-11e8-92c4-9457a5dbffff",
+            "date": "2018-11-12",
+            "question_description": "All i know is an api is an application programming interface pliz throw some light to api",
+            "answers": [],
+            "question_title": "What is an API?"
+            }
+        ]
+        
+## Get a specific question  [/api/v1/questions/<question_id>]
+
+### Get single question [GET]
+ You can get a single question given its id
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+            {
+            "Id": "6147f722-73d0-11e8-92c4-9457a5dbffff",
+            "date": "2018-11-12",
+            "question_description": "Am a novice programmer and wanted to know what python language stands for",
+            "answers": [],
+            "question_title": "What is python?"
+            }
+            
+
+
+## Post Answer to a question [/api/v1/questions/<question_id>/answers/]
+
+### Answer to a question [POST]
+
++ Request (application/json)
+
++ Response 201 (application/json)
+
+            {
+                "response" : "You have successfully answered the question."
+            }

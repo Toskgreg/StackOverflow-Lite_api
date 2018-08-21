@@ -139,3 +139,19 @@ class Up_vote(object):
                         answer['up_vote'] = answer['up_vote'] + 1
                         return "You have successfully upvoted the answer."
         abort(404)
+
+class Down_vote(object):
+    def __init__(self, answer_id, question_id):
+        self.answer_id = answer_id
+        self.question_id = question_id
+
+    @classmethod
+    def down_vote_on_answer(cls, question_id, answer_id):
+        """A method for downvoting a answer"""
+        for question in QUESTIONS:
+            if question['Id'] == question_id:
+                for answer in ANSWERS:
+                    if answer['Id'] == answer_id:
+                        answer['down_vote'] = answer['down_vote'] + 1
+                        return "You have successfully downvoted the answer."
+        abort(404)

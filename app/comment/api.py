@@ -15,6 +15,5 @@ class COMMENTAPI(MethodView):
         data = request.json
         text1 = data["text1"]
         res = Comment.comment_on_answer(question_id, answer_id, text1)
-        if res == "You have successfully commented on the answer.":
-            return jsonify({'msg': res}), 201
-        return jsonify({'msg': res}), 409
+        return jsonify({'msg': res}), 201
+        

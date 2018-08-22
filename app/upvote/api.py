@@ -13,6 +13,5 @@ class Up(MethodView):
         question_id = uuid.UUID(question_id)
         answer_id = uuid.UUID(answer_id)
         res = Up_vote.up_vote_on_answer(question_id, answer_id)
-        if res == "You have successfully upvoted the answer.":
-            return jsonify({'msg': res}), 201
-        return jsonify({'msg': res}), 409
+        return jsonify({'msg': res}), 201
+        

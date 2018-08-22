@@ -30,13 +30,13 @@ Stackoverflow-lite is a platform where people can ask questions and provide answ
 
  REQUEST | ROUTE | FUNCTIONALITY
  ------- | ----- | -------------
- GET | /api/v1/questions | Fetches all questions
- POST | /api/v1/questions | Posts a question
- GET | /api/v1/question/< questionId> | Fetches a specific question
- POST | /api/v1/questions/< question_Id>/answer/ | Post an answer to a question
- POST | /api/v1/questions/< question_Id>/< answer_id>/comment | Post a comment to answer
- POST | /api/v1/questions/< question_Id>/< answer_id>/upvote | Upvote answer
- POST | /api/v1/questions/< question_Id>/< answer_id>/downvote | Downvote  answer
+ GET | /api/v1/questions/ | Fetches all questions
+ POST | /api/v1/questions/ | Posts a question
+ GET | /api/v1/questions/< questionId> | Fetches a specific question
+ POST | /api/v1/questions/< question_id>/answer/ | Post an answer to a question
+ POST | /api/v1/questions/< question_id>/< answer_id>/comment | Post a comment to answer
+ POST | /api/v1/questions/< question_id>/< answer_id>/upvote | Upvote answer
+ POST | /api/v1/questions/< question_id>/< answer_id>/downvote | Downvote  answer
 
 
 ## BUIT WITH

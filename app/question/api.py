@@ -21,6 +21,7 @@ class QUESTIONAPI(MethodView):
                     "msg": " There are no questions at the moment"}
                 return make_response(jsonify(response)), 200
             return jsonify(questions), 200
+
     @staticmethod
     def post():
         '''Method for a post request'''

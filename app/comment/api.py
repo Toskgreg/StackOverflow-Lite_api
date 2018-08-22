@@ -16,4 +16,3 @@ class COMMENTAPI(MethodView):
         text1 = data["text1"]
         res = Comment.comment_on_answer(question_id, answer_id, text1)
         return jsonify({'msg': res}), 201
-        

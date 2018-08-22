@@ -138,7 +138,6 @@ class Up_vote(object):
                     if answer['Id'] == answer_id:
                         answer['up_vote'] = answer['up_vote'] + 1
                         return "You have successfully upvoted the answer."
-        
 
 
 class Down_vote(object):
@@ -155,4 +154,3 @@ class Down_vote(object):
                     if answer['Id'] == answer_id:
                         answer['down_vote'] = answer['down_vote'] + 1
                         return "You have successfully downvoted the answer."
-        

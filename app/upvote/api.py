@@ -14,4 +14,3 @@ class Up(MethodView):
         answer_id = uuid.UUID(answer_id)
         res = Up_vote.up_vote_on_answer(question_id, answer_id)
         return jsonify({'msg': res}), 201
-        

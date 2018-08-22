@@ -2,7 +2,7 @@
 import uuid
 from flask.views import MethodView
 from flask import jsonify, request
-from app.models import *
+from app.models import Comment
 
 
 class COMMENTAPI(MethodView):

@@ -1,7 +1,7 @@
 import uuid
 from flask.views import MethodView
 from flask import jsonify, request
-from app.models import *
+from app.models import ANSWERS,QUESTIONS,Question,Answer
 
 
 class AnswerAPI(MethodView):

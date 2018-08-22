@@ -2,7 +2,7 @@
 import uuid
 from flask.views import MethodView
 from flask import jsonify
-from app.models import *
+from app.models import Up_vote
 
 
 class Up(MethodView):

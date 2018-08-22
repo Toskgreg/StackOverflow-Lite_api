@@ -19,6 +19,18 @@ class TestAnswer(unittest.TestCase):
 
         self.assertEqual(response.status_code, 201)
 
+    def test__fields_are_empty(self):
+        """Test if a question can be created without data"""
+        response = self.app.post('api/v1/questions/',
+                                    content_type='application/json',
+                                    data=json.dumps({
+                                        "question_title":"",
+                                        "question_description":""
+                                    }))
+
+        self.assertIn("Dear user you can not enter empty fields. Please fill them",
+                      str(response.data))
+
     def test_return_created_code_if_answer_is_valid(self):
         """This method checks if a valid answer has been posted and returns an apropriate status code 201"""
         # post data

@@ -26,13 +26,11 @@ class Question(object):
         self.answers = ANSWERS
 
     @classmethod
-    def question_already_exists(cls, question_title, question_description):
-        """A method to check if the same question already exists """
-        for question in QUESTIONS:
-            if question['question_title'] == question_title and question['question_description'] == \
-                    question_description:
-                return True
-        return False
+    def question_fields_empty(cls, question_title, question_description):
+        """A method to check if the user is trying to enter empty fields """
+        if question_title.strip() == '' or question_description.strip() == '':
+            return True
+        
 
     @classmethod
     def view_all_questions(cls):
@@ -50,8 +48,8 @@ class Question(object):
     def ask_question(cls, question_title, question_description):
         """A method for asking a question"""
         cls.data = {}
-        if cls.question_already_exists(question_title, question_description):
-            return "question already exists"
+        if cls.question_fields_empty(question_title, question_description):
+            return "Dear user you can not enter empty fields. Please fill them"
         else:
             cls.data['Id'] = uuid.uuid1()
             cls.data['date_created'] = dt.utcnow()
@@ -83,22 +81,30 @@ class Answer(object):
         self.accepted = False
         self.date_answered = dt.utcnow()
 
+    def answer_fields_empty(cls, text):
+        """A method to check if the user is trying to enter empty answer field """
+        if text.strip() == '':
+            return True
+
     @classmethod
     def answer_question(cls, question_id, text):
         """A method for posting a answer"""
-        for question in QUESTIONS:
-            if question['Id'] == question_id:
-                cls.data1 = {}
-                cls.data1['Id'] = uuid.uuid1()
-                cls.data1['text'] = text
-                cls.data1['up_vote'] = 0
-                cls.data1['down_vote'] = 0
-                cls.data1['comment'] = COMMENTS
-                cls.data1['accepted'] = False
-                cls.data1['date_answered'] = dt.utcnow()
+        if cls.answer_fields_empty(question_id,text):
+            return "Dear user you can not enter empty fields. Please fill them"
+        else:
+            for question in QUESTIONS:
+                if question['Id'] == question_id:
+                    cls.data1 = {}
+                    cls.data1['Id'] = uuid.uuid1()
+                    cls.data1['text'] = text
+                    cls.data1['up_vote'] = 0
+                    cls.data1['down_vote'] = 0
+                    cls.data1['comment'] = COMMENTS
+                    cls.data1['accepted'] = False
+                    cls.data1['date_answered'] = dt.utcnow()
 
-                ANSWERS.append(cls.data1)
-                return "You have successfully answered the question."
+                    ANSWERS.append(cls.data1)
+                    return "You have successfully answered the question."
 
 
 class Comment(object):
